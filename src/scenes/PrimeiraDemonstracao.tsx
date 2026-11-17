@@ -10,7 +10,7 @@ const Worker: React.FC<{x: number; delay?: number}> = ({x, delay = 0}) => {
   const bob = Math.sin((frame + delay) / 8) * 7;
   const arm = Math.sin((frame + delay) / 10) * 13;
   return (
-    <g transform={`translate(${x} ${bob})`}>
+    <g transform={`translate(${x} ${430 + bob})`}>
       {/* legs */}
       <path d="M-27 245 L-34 355 L-5 355 L4 260 M18 250 L30 355 L58 355 L48 238" fill={NAVY} />
       <path d="M-42 355 L-2 355 L-2 372 L-50 372 Z M28 355 L68 355 L72 372 L30 372 Z" fill="#172033"/>
@@ -64,7 +64,7 @@ export const PrimeiraDemonstracao: React.FC = () => {
           {[0,1,2,3,4,5,6,7].map(i=><rect key={i} x={140+i*150} y="1170" width="95" height="90" rx="12" fill={i%2? "#B97842":"#7A513A"}/>)}
         </g>
         <path d="M100 1330 L80 1400 M980 1330 L1000 1400" stroke="#27364A" strokeWidth="22"/>
-        <g transform={`translate(0 ${planeY})`} opacity=".9">
+        <g transform={`translate(0 ${600 + planeY})`} opacity=".9">
           <path d="M790 240 Q860 205 930 240 L1020 260 L930 280 Q860 315 790 280 L730 275 L730 245 Z" fill="#FFFFFF" stroke={BLUE} strokeWidth="6"/>
           <path d="M850 240 L880 175 L900 180 L890 245 M850 280 L880 340 L900 335 L890 275" fill="#FFFFFF" stroke={BLUE} strokeWidth="5"/>
         </g>
